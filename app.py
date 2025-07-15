@@ -5,7 +5,13 @@ st.set_page_config(page_title="Informasi Kimia Organik", layout="centered")
 
 st.title("🧪 Informasi Senyawa Kimia Organik Berbahaya")
 
-st.markdown("Pilih senyawa organik di bawah untuk melihat tingkat bahaya dan penanganannya:")
+# Penjelasan tentang kimia organik
+st.markdown("""
+Kimia organik adalah cabang ilmu kimia yang mempelajari struktur, sifat, reaksi, dan sintesis senyawa yang mengandung karbon. 
+Beberapa senyawa organik digunakan dalam industri dan laboratorium, namun banyak di antaranya yang berbahaya bagi kesehatan dan lingkungan.
+
+Aplikasi ini membantu mengenali berbagai **senyawa kimia organik berbahaya**, jenis bahayanya, serta cara penanganannya secara aman.
+""")
 
 # Data senyawa
 data = {
@@ -71,4 +77,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.caption("Dibuat oleh Kelompok 2 – 2025")
+st.caption("Dibuat oleh **Kelompok 7 - Kelas 1D** · 2025")
