@@ -8,7 +8,7 @@ st.title("🧪 Informasi Senyawa Kimia Organik Berbahaya")
 
 # Baca file Excel
 try:
-    df = pd.read_excel("data_kimia.xlsx")
+    df = pd.read_excel("data_kimia(1).xlsx")
 except Exception as e:
     st.error(f"Gagal membaca file Excel: {e}")
     st.stop()
