@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
-from datetime import date
 
-st.set_page_config(page_title="Log Bahan Kimia Organik", layout="centered")
+st.set_page_config(page_title="Informasi Kimia Organik", layout="centered")
 
-st.title("🧪 Pemantauan Bahan Kimia Organik Berbahaya")
+st.title("🧪 Informasi Senyawa Kimia Organik Berbahaya")
 
-tanggal = st.date_input("Tanggal", value=date.today(), format="YYYY/MM/DD")
+st.markdown("Pilih senyawa organik di bawah untuk melihat tingkat bahaya dan penanganannya:")
 
+# Data senyawa
 data = {
     'Senyawa': [
         'Benzena', 'Formaldehida', 'Aseton', 'Toluena', 'Etil Asetat', 'Metanol', 'Kloroform',
@@ -51,37 +51,24 @@ data = {
         'Tangani dengan ventilasi baik dan APD'
     ]
 }
+
 df = pd.DataFrame(data)
 
-st.header("🧫 Shift Pagi")
-pagi = st.selectbox("Pilih senyawa (pagi)", [""] + df['Senyawa'].tolist(), key="pagi")
+# Dropdown senyawa
+pilih = st.selectbox("🔍 Pilih Senyawa Organik", [""] + df['Senyawa'].tolist())
 
-st.header("🧪 Shift Siang")
-siang = st.selectbox("Pilih senyawa (siang)", [""] + df['Senyawa'].tolist(), key="siang")
-
-st.header("🌙 Shift Malam")
-malam = st.selectbox("Pilih senyawa (malam)", [""] + df['Senyawa'].tolist(), key="malam")
-
-st.header("🧴 Cadangan")
-cadangan = st.selectbox("Pilih senyawa cadangan", [""] + df['Senyawa'].tolist(), key="cadangan")
-
-dipilih = [s for s in [pagi, siang, malam, cadangan] if s != ""]
-
-if dipilih:
-    st.subheader("📋 Detail Senyawa Dipilih")
-    hasil = df[df['Senyawa'].isin(dipilih)]
-
-    for _, row in hasil.iterrows():
-        st.markdown(f"""
-        ### 🧪 {row['Senyawa']}
-        - **Bahaya:** {row['Bahaya']}
-        - **Tingkat Keparahan:** :red[{row['Keparahan']}]
-        - **Penanganan:** {row['Penanganan']}
-        """)
-
-    st.success(f"{len(dipilih)} senyawa dicatat untuk tanggal {tanggal.strftime('%Y/%m/%d')}")
+# Tampilkan informasi senyawa
+if pilih:
+    row = df[df['Senyawa'] == pilih].iloc[0]
+    st.markdown(f"""
+    ## 🧪 {row['Senyawa']}
+    - **Bahaya:** {row['Bahaya']}
+    - **Tingkat Keparahan:** :red[{row['Keparahan']}]
+    - **Cara Penanganan:** {row['Penanganan']}
+    """)
 else:
-    st.info("Pilih senyawa organik untuk melihat informasinya.")
+    st.info("Silakan pilih senyawa dari daftar di atas.")
 
+# Footer
 st.markdown("---")
 st.caption("Dibuat oleh Kelompok 2 – 2025")
