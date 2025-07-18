@@ -20,15 +20,17 @@ def tampilkan_home():
     st.success("📘 Dibuat oleh: **Kelompok 7 - Kelas 1D**")
 
     st.info("🔍 Silakan pilih menu di **sidebar** untuk mulai menjelajahi!")
-# Sidebar navigasi
+# Navigasi
 st.sidebar.title("Navigasi")
 halaman = st.sidebar.radio("Pilih Halaman:", ["Home", "Kimia Organik", "Kimia Anorganik"])
 
-# Halaman: Home
+# Menampilkan halaman
 if halaman == "Home":
-    st.title("🏠 Selamat Datang di Aplikasi Kimia")
-    st.write("Aplikasi ini berisi informasi tentang bahan kimia organik dan anorganik.")
-    st.info("Kelompok 7 - Kelas 1D")
+    tampilkan_home()
+elif halaman == "Kimia Organik":
+    tampilkan_kimia_organik()
+elif halaman == "Kimia Anorganik":
+    tampilkan_kimia_anorganik()
 
 # Halaman: Kimia Organik
 elif halaman == "Kimia Organik":
