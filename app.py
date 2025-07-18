@@ -3,33 +3,38 @@ if menu == "Home":
         "<h1 style='text-align: center; color:#4CAF50;'>🧪 Aplikasi Informasi Bahan Kimia</h1>", 
         unsafe_allow_html=True
     )
+    
     st.markdown(
-        "<h4 style='text-align: center; color:#2196F3;'>📚 Jelajahi Dunia Kimia Organik & Anorganik</h4>", 
+        "<h3 style='text-align: center; color:#2196F3;'>📚 Edukasi Kimia Organik & Anorganik</h3>", 
         unsafe_allow_html=True
     )
 
-    st.image("https://images.unsplash.com/photo-1618232991513-06d4f4241b2e?auto=format&fit=crop&w=800&q=80", 
-             caption="Eksperimen Laboratorium Kimia", use_column_width=True)
+    st.image(
+        "https://images.unsplash.com/photo-1618232991513-06d4f4241b2e?auto=format&fit=crop&w=800&q=80", 
+        caption="Eksperimen Laboratorium Kimia", 
+        use_container_width=True
+    )
+
+    st.markdown("---")
 
     st.markdown("""
-    ---
-    ### 🌟 **Selamat Datang!**
-    Aplikasi ini dirancang khusus untuk memberikan edukasi seputar **bahan kimia** yang sering kita temui di kehidupan sehari-hari.
+    ### 🌟 Selamat Datang!
+    Aplikasi ini dirancang untuk memberikan informasi lengkap dan edukatif tentang berbagai bahan kimia yang digunakan dalam kehidupan sehari-hari.
 
-    **Apa aja sih isi aplikasinya?**
-    - 🔬 Penjelasan senyawa **organik** dan **anorganik**
-    - ⚠️ Tingkat bahaya dan cara penanganan bahan kimia
-    - 🧪 Rumus kimia dan kegunaannya
-
-    ---
-    ### 🧠 **Apa itu Kimia Organik & Anorganik?**
-
-    🧬 **Kimia Organik**: Senyawa yang mengandung karbon, seperti alkohol, asam karboksilat, dan ester.  
-    ⚗️ **Kimia Anorganik**: Senyawa tanpa karbon, seperti asam sulfat, natrium klorida, dan logam oksida.
+    **Apa yang bisa kamu pelajari di sini?**
+    - 🔬 Pengetahuan tentang senyawa **organik** dan **anorganik**
+    - ⚠️ Informasi bahaya bahan kimia & cara penanganannya
+    - 🧪 Rumus kimia dan aplikasinya
 
     ---
-    ### 🎯 Yuk Jelajahi Menu di Sebelah Kiri!
-    Klik menu **Bahan Kimia Organik** atau **Anorganik** buat mulai belajar.
+
+    ### 🧠 Apa Itu Kimia Organik & Anorganik?
+
+    **Kimia Organik**: Mempelajari senyawa karbon seperti alkohol, asam karboksilat, ester, dll.  
+    **Kimia Anorganik**: Mempelajari senyawa non-karbon seperti logam, asam mineral, basa kuat, dan garam.
+
+    ---
+
+    📌 Gunakan menu di samping untuk mulai belajar!
+
     """)
-
-    st.success("👈 Ayo mulai eksplorasi bahan kimia favoritmu!")
