@@ -1,4 +1,5 @@
-import streamlit as st import pandas as pd import random
+import streamlit as st 
+import pandas as pd import random
 
 st.set_page_config(page_title="Aplikasi Informasi Bahan Kimia", layout="centered")
 
