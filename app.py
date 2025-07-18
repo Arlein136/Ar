@@ -1,8 +1,12 @@
+import streamlit as st
+
+st.set_page_config(page_title="Info Bahan Kimia", layout="wide")
+
+# Navigasi menu
+menu = st.sidebar.selectbox("Pilih Halaman", ["Home", "Kimia Organik", "Kimia Anorganik"])
 if menu == "Home":
-    st.markdown(
-        "<h1 style='text-align: center; color:#4CAF50;'>🧪 Aplikasi Informasi Bahan Kimia</h1>", 
-        unsafe_allow_html=True
-    )
+    st.title("Selamat Datang di Aplikasi Bahan Kimia")
+    # dan seterusnya...
     
     st.markdown(
         "<h3 style='text-align: center; color:#2196F3;'>📚 Edukasi Kimia Organik & Anorganik</h3>", 
